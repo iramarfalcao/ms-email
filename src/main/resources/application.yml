@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+  url: jdbc:postgresql://localhost:5432/ms-email
+  username: postgres
+  password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "********@gmail.com"
+    password: "******************"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  rabbitmq:
+    addresses: amqps://wggzhuka:X0WbwZffhRrQ5HztDS3SJmA1uIYzCjHw@beaver.rmq.cloudamqp.com/wggzhuka
+    queue: ms.email
